@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Engineering Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+        }
+        
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .glass-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 350px;
+            height: 320px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            border-radius: 10px;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            z-index: 1;
+        }
+        
+        .reveal h5 {
+            position: relative;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .vertical-rows {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .row {
+            width: 100%;
+            height: 170px;
+            background: rgba(0, 255, 0, 0.8);
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateX(-200px);
+            animation: slideInFromLeft 1s forwards;
+        }
+        
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-200px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        /* 3D Circle Styling */
+        
+        #circle-container {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        #circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(0, 255, 0, 0.8);
+            position: absolute;
+            animation: rotateCircle 4s infinite linear;
+            border: 5px solid #0f0;
+        }
+        /* Rotate Animation */
+        
+        @keyframes rotateCircle {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* Text Over the Circle */
+        
+        #text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 2;
+            width: 150%;
+            height: 120%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        /* DNA Animation Styling */
+        
+        .dna-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .dna-strand {
+            position: absolute;
+            width: 8px;
+            height: 150px;
+            background: linear-gradient(to top, #ff0, #f00);
+            animation: rotateDNA 5s infinite linear;
+        }
+        
+        .dna-text {
+            position: absolute;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            height: 90%;
+            z-index: 2;
+            background-color: rgb(0, 0, 0);
+        }
+        /* DNA Rotation Animation */
+        
+        @keyframes rotateDNA {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="glass-box">
+        <h3>Important Note</h3>
+        <p>EXAMPLES OF SOCIAL ENGINEERING ARE: Phishing<br> vishing<br> Physical baiting<br> pretexting<br> diversion theft<br> honeytrap<br> and etcetera</p>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="diamond">
+                    <span style="color:red;">THE ART OF HUMAN HACKING</span>
+                </div>
+                <h1>Social Engineering</h1>
+                <p style="font-size:35px;">Social engineering is a manipulation technique that exploits human error to gain private information, access, or valuables.<br> It often relies on deception, persuasion, and psychological tactics to breach security systems without force.</p>
+            </section>
+            <section>
+                <h5>WHAT ARE THE EXAMPLES OF SOCIAL ENGINEERING?</h5>
+                <h5 id="text-reveal">PHISHING, PHISHING EMAILS, VISHING, QUID PRO QUO,<br> DIVERSION THEFT AND PHYSICAL BAITING, PRETEXTING ARE ONLY SOME OF THE EXAMPLES <br>OF SOCIAL ENGINEERING<br>
+                    <h5><strong><a href="https://owasp.org/">owasp.org</a> </strong><br>They provide detailed insights into various cybersecurity topics, including social engineering and phishing.</p>
+                    </h5>
+                    </h4>
+                    <div class="arrow" onclick="nextSlide()"></div>
+
+                    <div class="vertical-rows">
+                        <div class="row" style="color:#000;">
+                            <h5 style="color:black;"><strong>WHAT IS PHISHING?</strong><br>Phishing is a form of online fraud where attackers attempt to steal sensitive information such as passwords,<br> credit card numbers, or bank account details.<br>This is typically done
+                                by sending deceptive emails or messages that appear to be from trusted sources like banks or well-known websites.</h5>
+                        </div>
+                        <div class="row">
+                            <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\coopa-keupa.gif" class=" heyy" width="400" height="300" />
+                            <h5></h5> Phishing attacks have become increasingly sophisticated and often transparently mirror the site being targeted,<br> allowing the attacker to observe everything while the victim navigates the site,<br> and transverses
+                            any additional security boundaries with the victim. EXAMPLES OF THIS ARE PHISHING SITES AND SOME OF THEM ARE LOCATED IN HIDDEN WIKI</h5>
+                </div>
+                </div>
+            </section>
+            <section>
+                <div class="anbox" style=" width:660; height: 640; color: green; background-color: rgb(14, 14, 12);;">
+                    <h3 color: black;>WHAT IS VISHING?</h3><br>
+                    <h4 color: black;>, short for "voice phishing," is a phone-based cyberattack where scammers exploit the phone to trick victims into sharing personal information and financial details, such as bank account numbers and passwords.
+                    </h4>
+
+
+                    <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\hacker-7955_256.gif" alt="Description of GIF" width="380" height="280">
+                    <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\phone-5459_256.gif" width="380" height="280">
+                </div>
+            </section>
+
+            <!-- 3D Circle Slide (Scientific Model) -->
+            <section>
+                <div id="circle-container">
+                    <canvas id="canvas" width="800" height="600"></canvas>
+                    <div id="text-overlay" style=" color: orange ;text-shadow:2px 2px white">
+                        <h3>
+                            <h4 style="position:top">what are the examples of entities and organizations related to cybersecurity , phishing and social engineering</h4>
+                            <p>
+                                <h3><strong> OWASP FOUNDATION- THE OPENSOURCE FOUNDATION</strong>strong-----">" They provide detailed insights into various cybersecurity topics, including social engineering and phishing.
+                                    <a href="https://owasp.org/">owasp.org</a>
+                                    <BR><br>
+                                    <strong></strong> STAYSAFEONLINE.ORG--">"resource from the National Cyber Security Alliance that offers practical tips on cybersecurity, including phishing and social engineering.<a href="https://staysafeonline.org/">staysafeonline.org</a>
+                                    <BR><br> <strong>CISA.GOV--">"</strong> Cybersecurity & Infrastructure Security Agency (CISA) - This site contains useful resources and guides on cyber threats, including pretexting and other social engineering tactics.
+                                    <a href="https://cisa.gov/">cisa.gov</a>
+                                    <br><br> <strong>SANS.ORG---">"</strong>Known for their cybersecurity training, they also offer articles, whitepapers, and blogs on social engineering techniques like phishing and pretexting<a href="https://sans.org/">sans.org</a>
+                                </h3>
+                        </h3>
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- DNA Animation Slide -->
+            <section>
+                <div class="dna-container">
+                    <div class="dna-strand" style="left: 50px; animation-duration: 5s;"></div>
+                    <div class="dna-strand" style="left: 200px; animation-duration: 6s;"></div>
+                    <div class="dna-strand" style="left: 350px; animation-duration: 7s;"></div>
+                    <div class="dna-text" style="left: 50px; color:#000;">
+                        <h2>WHAT IS SOCIAL ENGINEERING TOOLKIT?</h2><br>
+                        <h3>The Social Engineering Toolkit (SET) is an open-source tool designed for social engineering. <br>It contains options for attack vectors to make a believable attack quickly, and was designed for testing purposes only. The SET is
+                            written in Python and is a powerful collection<br> of tools designed for social engineering. Penetration testers or Red Team members often use it to test an organization's security by simulating social engineering attacks on
+                            employees.
+                            <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\OIP.jpg" style="width: 590px; height: 399px">
+                            <img src="omg.webp" style="position:top-left; width: 590px; height:399px;">
+                        </h3>
+                    </div>
+
+                </div>
+            </section>
+            <section>ssslide no. 5</section>
+            <section> slide no. 6</section>
+            <section> slide no. 7</section>
+            <section> slide no. 8</section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+
+        // Trigger animations when Slide 2 is shown
+        Reveal.on('slidechanged', function(event) {
+            if (event.indexh === 1) {
+                document.querySelector('.arrow').style.display = 'block';
+            }
+        });
+
+        // Function to navigate to the third slide
+        function nextSlide() {
+            Reveal.slide(2);
+        }
+
+        // 3D Scientific Circle using THREE.js
+        const canvas = document.getElementById("canvas");
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        // Create a Sphere Geometry to represent a scientific 3D circle
+        const geometry = new THREE.SphereGeometry(5, 32, 32);
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x00ff00,
+            wireframe: true
+        });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        // Add orbiting particles for an atom-like effect
+        const particleGeometry = new THREE.SphereGeometry(0.2, 8, 8);
+        const particleMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00ff00
+        });
+        const particles = [];
+
+        for (let i = 0; i < 10; i++) {
+            const particle = new THREE.Mesh(particleGeometry, particleMaterial);
+            const angle = Math.random() * 2 * Math.PI;
+            const radius = 7 + Math.random() * 3;
+            particle.position.x = Math.cos(angle) * radius;
+            particle.position.z = Math.sin(angle) * radius;
+            particles.push(particle);
+            scene.add(particle);
+        }
+
+        camera.position.z = 5;
+
+        // Render loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            sphere.rotation.x += 0.01;
+            sphere.rotation.y += 0.01;
+
+            particles.forEach(particle => {
+                particle.rotation.x += 0.01;
+                particle.rotation.y += 0.01;
+            });
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>
