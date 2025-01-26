@@ -5,4 +5,4 @@ SORRY SA CONTRAST AT KUNG MEDYO MALIIT YUNG FONT HANGGANG 7 SLIDES LANG KASI BAK
 SUGGEST NA LANG KAYO FOR IMPROVEMENT
 PAKI SEND NA RIN YUNG MGA IDEAS NYO OR DAGDAG INFORMATION ABOUT SOCIAL ENGINEERING IN MESSENGER PARA MATAPOS NA :)
 this is the code in case u want to edit
-socialengineeringpresentation.html.html
+https://github.com/anonymousscriptkiddie/socialengineering-presentation/blob/main/socialengineeringpresentation.html.html
