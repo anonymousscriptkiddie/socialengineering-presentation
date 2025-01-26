@@ -213,6 +213,67 @@
                 transform: rotate(360deg);
             }
         }
+        
+        .sonar {
+            position: relative;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+            overflow: hidden;
+        }
+        
+        .sweep {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 255, 0, 0.3);
+            transform-origin: center;
+            animation: sweep 4s linear infinite;
+            clip-path: polygon(50% 50%, 100% 50%, 100% 0, 0 0, 0 100%, 100% 100%);
+        }
+        
+        @keyframes sweep {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #00ff00;
+            font-family: Arial, sans-serif;
+        }
+        
+        .text h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .text p {
+            font-size: 1.5rem;
+        }
+        
+        .image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: url('your-image.jpg') no-repeat center/cover;
+            border: 3px solid #00ff00;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -223,7 +284,8 @@
     </video>
     <div class="glass-box">
         <h3>Important Note</h3>
-        <p>EXAMPLES OF SOCIAL ENGINEERING ARE: Phishing<br> vishing<br> Physical baiting<br> pretexting<br> diversion theft<br> honeytrap<br> and etcetera</p>
+        <p>EXAMPLES OF SOCIAL ENGINEERING ARE: Phishing<br> vishing<br> Physical baiting<br> pretexting<br> diversion theft<br> honeytrap<br> and etcetera<br>Impersonation: A hacker pretends to be a colleague, boss, or other trusted individual in an organization,
+            requesting sensitive information or access to secure systems. Tailgating: An attacker physically follows an authorized person into a secure building or area, relying on the person’s politeness to let them in without questioning their identity.</p>
     </div>
     <div class="reveal">
         <div class="slides">
@@ -232,9 +294,12 @@
                     <span style="color:red;">THE ART OF HUMAN HACKING</span>
                 </div>
                 <h1>Social Engineering</h1>
-                <p style="font-size:35px;">Social engineering is a manipulation technique that exploits human error to gain private information, access, or valuables.<br> It often relies on deception, persuasion, and psychological tactics to breach security systems without force.</p>
+                <p style="font-size:35px;">Social engineering refers to the manipulation or tricking of people into divulging confidential information, performing certain actions, or gaining unauthorized access to systems or data. It relies on psychological manipulation rather
+                    than technical hacking to exploit human behavior or trust.</p>
             </section>
             <section>
+                <div class="bx">h</div>
+
                 <h5>WHAT ARE THE EXAMPLES OF SOCIAL ENGINEERING?</h5>
                 <h5 id="text-reveal">PHISHING, PHISHING EMAILS, VISHING, QUID PRO QUO,<br> DIVERSION THEFT AND PHYSICAL BAITING, PRETEXTING ARE ONLY SOME OF THE EXAMPLES <br>OF SOCIAL ENGINEERING<br>
                     <h5><strong><a href="https://owasp.org/">owasp.org</a> </strong><br>They provide detailed insights into various cybersecurity topics, including social engineering and phishing.</p>
@@ -249,11 +314,13 @@
                         </div>
                         <div class="row">
                             <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\coopa-keupa.gif" class=" heyy" width="400" height="300" />
-                            <h5></h5> Phishing attacks have become increasingly sophisticated and often transparently mirror the site being targeted,<br> allowing the attacker to observe everything while the victim navigates the site,<br> and transverses
-                            any additional security boundaries with the victim. EXAMPLES OF THIS ARE PHISHING SITES AND SOME OF THEM ARE LOCATED IN HIDDEN WIKI</h5>
+                            <h5></h5> An attacker sends a fake email that appears to be from a trusted source (like a bank or a company) asking the recipient to click a link and input sensitive information, such as passwords or credit card details. and another
+                            one is phishing sites<br> EXAMPLES OF THIS ARE PHISHING SITES AND SOME OF THEM ARE LOCATED IN HIDDEN WIKI</h5>
                 </div>
                 </div>
+
             </section>
+
             <section>
                 <div class="anbox" style=" width:660; height: 640; color: green; background-color: rgb(14, 14, 12);;">
                     <h3 color: black;>WHAT IS VISHING?</h3><br>
@@ -264,6 +331,21 @@
                     <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\hacker-7955_256.gif" alt="Description of GIF" width="380" height="280">
                     <img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\phone-5459_256.gif" width="380" height="280">
                 </div>
+            </section>
+            <section>
+                <div class="sonar">
+                    <div class="sweep"></div>
+                    <div class="text">
+                        <h1 style="color:black;">PRETEXTING</h1>
+                        <p>
+
+                            <h4 style="color:black;">The attacker creates a fabricated scenario, such as posing as an employee from a company and asking someone for personal information to "verify" their account.</h4>
+                            <br>
+                            <h1 style="color:black;">BAITING</h1>
+                            <h3>The attacker offers something enticing, like free software or a prize, but the offer is designed to get the target to download malicious software or provide their login details.</h3>
+                        </p>
+                    </div>
+                    <div><img src="C:\Users\PRECIOUS CANDY PRADO\Downloads\socialengineer\hi\pretext.webp"></div>
             </section>
 
             <!-- 3D Circle Slide (Scientific Model) -->
