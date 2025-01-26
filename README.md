@@ -7,3 +7,8 @@ PAKI SEND NA RIN YUNG MGA IDEAS NYO OR DAGDAG INFORMATION ABOUT SOCIAL ENGINEERI
 this is the code in case u want to edit
 https://github.com/anonymousscriptkiddie/socialengineering-presentation/blob/main/socialengineeringpresentation.html.html
 ![Image](https://github.com/user-attachments/assets/9f04bc56-f30c-4343-ae75-865f29f5bdaa)
+![Image](https://github.com/user-attachments/assets/38d3aa2a-cbf1-406d-a23c-a6d7bec43079)
+![Image](https://github.com/user-attachments/assets/a57d211f-2ee7-4fb2-9fdc-47ccdd47e74a)
+![Image](https://github.com/user-attachments/assets/26d6c390-b7ff-4c91-9391-ad861f79c863)
+![Image](https://github.com/user-attachments/assets/9e60db8d-cbac-48da-b435-60fa76be6ca1)
+![Image](https://github.com/user-attachments/assets/9f04bc56-f30c-4343-ae75-865f29f5bdaa)
